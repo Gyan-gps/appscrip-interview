@@ -50,7 +50,12 @@ function App() {
                 <div className="title">{product.title}</div>
                 <div className="desc">{product.description.slice(0, 30)}</div>
                 <div className="pricediv">
-                  <div className="price">RS. {product.price}</div>
+                  <div className="price">
+                    RS.{" "}
+                    {Math.round(
+                      product.price * (100 - product.discountPercentage)
+                    ) / 100}
+                  </div>
                   <del className="pprice">Rs. {product.price}</del>
                   <div className="pdiscount">
                     ({product.discountPercentage} % OFF)
