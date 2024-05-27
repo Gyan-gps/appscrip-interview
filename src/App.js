@@ -28,7 +28,7 @@ function App() {
     <div className="App">
       <div className="cardList">
         {products === null ? (
-          <h1>loading</h1>
+          <h1>loading...</h1>
         ) : products.length === 0 ? (
           <h1>Empty product List</h1>
         ) : (
